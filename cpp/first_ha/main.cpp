@@ -1,10 +1,22 @@
 #include <iostream>
-#include <QLibrary>
-QLibrary   lib("ha.dll");
+#include "ha.h"
+
 using namespace std;
 
 int main(int argc, char *argv[])
 {
 
-    return 0;
+
+    int a , b ; //описание вещественных переменных
+    cout<<" a = " ;
+    cin>>a ; // прогр. останавливается и ждет ввода с клавиатуры
+    cout<<" b = " ;
+    cin>>b ;
+
+    Ha sumInts;
+
+    cout << " result = " << sumInts <<endl ;
+
+
+    return sumInts;
 }

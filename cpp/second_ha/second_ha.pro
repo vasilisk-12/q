@@ -6,7 +6,11 @@ CONFIG += c++11
 TARGET = second_ha
 CONFIG += console
 CONFIG -= app_bundle
-LIBS  += -L"C:\Users\VAsilisk\Desktop\Qt\build-ha-Desktop_Qt_5_6_0_MinGW_32bit-Debug\debug\ha.dll"
+LIBS  += -L"C:\Users\VAsilisk\Desktop\Qt\cpp\second_ha\ha.dll"
 TEMPLATE = app
 
 SOURCES += main.cpp
+
+HEADERS += \
+    ha.h \
+    ha_global.h

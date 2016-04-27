@@ -17,7 +17,7 @@ CXXFLAGS      = -pipe -fno-keep-inline-dllexport -O2 -std=gnu++0x -frtti -Wall -
 INCPATH       = -I..\second_ha -I. -ID:\QtCpp\5.6\mingw49_32\include -ID:\QtCpp\5.6\mingw49_32\include\QtCore -Irelease -ID:\QtCpp\5.6\mingw49_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-s -Wl,-subsystem,console -mthreads
-LIBS        =        -LC:\Users\VAsilisk\Desktop\Qt\build-ha-Desktop_Qt_5_6_0_MinGW_32bit-Debug\debug\ha.dll -LD:\QtCpp\5.6\mingw49_32\lib D:\QtCpp\5.6\mingw49_32\lib\libQt5Core.a 
+LIBS        =        -LC:\Users\VAsilisk\Desktop\Qt\cpp\second_ha\ha.dll -LD:\QtCpp\5.6\mingw49_32\lib D:\QtCpp\5.6\mingw49_32\lib\libQt5Core.a 
 QMAKE         = D:\QtCpp\5.6\mingw49_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -46,7 +46,8 @@ OBJECTS_DIR   = release
 SOURCES       = ..\second_ha\main.cpp 
 OBJECTS       = release/main.o
 
-DIST          =   ..\second_ha\main.cpp
+DIST          =  ..\second_ha\ha.h \
+		..\second_ha\ha_global.h ..\second_ha\main.cpp
 QMAKE_TARGET  = second_ha
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = second_ha.exe
@@ -159,7 +160,9 @@ release/main.o: ../second_ha/main.cpp D:/QtCpp/5.6/mingw49_32/include/QtCore/QCo
 		D:/QtCpp/5.6/mingw49_32/include/QtCore/qobject_impl.h \
 		D:/QtCpp/5.6/mingw49_32/include/QtCore/qeventloop.h \
 		D:/QtCpp/5.6/mingw49_32/include/QtCore/QLibrary \
-		D:/QtCpp/5.6/mingw49_32/include/QtCore/qlibrary.h
+		D:/QtCpp/5.6/mingw49_32/include/QtCore/qlibrary.h \
+		../second_ha/ha.h \
+		../second_ha/ha_global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\second_ha\main.cpp
 
 ####### Install
