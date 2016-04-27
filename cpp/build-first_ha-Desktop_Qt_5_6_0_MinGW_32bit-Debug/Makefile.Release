@@ -92,7 +92,8 @@ compiler_clean:
 
 ####### Compile
 
-release/main.o: ../first_ha/main.cpp 
+release/main.o: ../first_ha/main.cpp ../first_ha/ha.h \
+		../first_ha/ha_global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\first_ha\main.cpp
 
 ####### Install

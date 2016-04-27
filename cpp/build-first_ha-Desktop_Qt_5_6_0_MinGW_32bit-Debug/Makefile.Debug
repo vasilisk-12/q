@@ -92,7 +92,8 @@ compiler_clean:
 
 ####### Compile
 
-debug/main.o: ../first_ha/main.cpp 
+debug/main.o: ../first_ha/main.cpp ../first_ha/ha.h \
+		../first_ha/ha_global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\first_ha\main.cpp
 
 ####### Install
